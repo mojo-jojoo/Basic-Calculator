@@ -26,7 +26,7 @@ The **Advanced Calculator** is a web-based application that allows users to perf
 - **JavaScript**: For implementing logic and functionality.
 - **React**: For building dynamic and interactive UI components.
 
-## Installation
+np Installation
 1. Clone the repository:
     ```bash
     git clone https://github.com/your-username/advanced-calculator.git
