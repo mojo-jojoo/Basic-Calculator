@@ -1,9 +1,16 @@
+
 import React, { useState } from 'react';
-import './Calculator.js';
+import './Calculator.js';  
 
 const Calculator = () => {
   const [display, setDisplay] = useState('');
   const [memory, setMemory] = useState(null);
+  const [darkMode, setDarkMode] = useState(true);
+
+  // Toggle theme
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
 
   const handleButtonClick = (value) => {
     setDisplay(display + value);
@@ -68,7 +75,12 @@ const Calculator = () => {
   };
 
   return (
-    <div className="calculator">
+    <div className={`calculator ${darkMode ? 'dark' : 'light'}`}>
+      {/* Theme Toggle Button */}
+      <button className="toggle-button" onClick={toggleTheme}>
+        {darkMode ? 'Light Mode' : 'Dark Mode'}
+      </button>
+
       <div className="screen">{display || '0'}</div>
       <div className="button-grid">
         <button className="button" onClick={() => handleButtonClick('7')}>7</button>
